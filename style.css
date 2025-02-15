@@ -11,7 +11,7 @@ header{
     background: conic-gradient(from 180deg at 50% 50%, #0A1F3F 0deg, #1A52A5 360deg);
     .headerCenter{
         position: absolute;
-        border: 1px solid green;
+        /*border: 1px solid green;*/
         width: 100%;
         height: calc(var(--element-height));
         display: grid;
@@ -160,7 +160,7 @@ header{
     justify-content: space-between;
 }
 
-button:hover{
+#menubtn:hover{
     transform: scale(1.1);
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -202,6 +202,38 @@ button:hover{
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.btndiv{
+    height: 25px;
+    overflow: hidden;
+}
+
+.btndiv p{
+    display: flex;
+    justify-content: end;
+    margin-top: 7px;
+    padding-right: 10px;
+    color: whitesmoke;
+}
+
+.infoMain button{
+    background-color: rgba(0, 195, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.infoMain button:hover{
+    transform: scale(1.1);
+    border: 1px solid white;
+    background-color: rgba(0, 102, 255, 0.774);
+}
+
+.infoMain button:active{
+    transition: 0.1s;
+    transform: scale(0.9);
+}
+
 main{
 
     width: 100%;
@@ -210,8 +242,49 @@ main{
     .mainDiv1{
         z-index: 3;
         width: 100%;
-        height: 100vh;
-        border: 1px solid red;
+        height: var(--mainDiv1-height);
         background-color: white;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: 35fr 65fr;
+        .mainDiv11{
+            border: 1px solid blue;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            place-items: center;
+        }
+        .mainDiv12{
+            border: 1px solid greenyellow;
+        }
     }
+}
+
+.line1text{
+    border: 1px solid red;
+    border-left: 2px solid black;
+    height: 70%;
+    width: calc(100% - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.l1tp1-p{
+    height: 65%;
+    border: 1px solid blue;
+    width: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.l1tp1{
+    font-size: 30pt;
+}
+
+@media (min-height: 500px) {
+    
 }
