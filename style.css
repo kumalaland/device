@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: var(--element-height);
+    min-height: 500px;
+    background: conic-gradient(from 180deg at 50% 50%, #0A1F3F 0deg, #1A52A5 360deg);
+    .headerCenter{
+        position: absolute;
+        border: 1px solid green;
+        width: 100%;
+        height: calc(var(--element-height));
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 10px;
+        .info{
+            overflow: hidden;
+            h1{
+                margin-top: 50px;
+                font-family: 'Inter';
+                font-style: italic;
+                font-weight: 700;
+                font-size: 30pt;
+                color: #ffffff;
+                overflow: hidden;
+                min-height: auto;
+                margin-left: 40px;
+                width: calc(auto - 40px);
+            }
+            button{
+                width: 230px;
+                height: 35px;
+                margin-top: 50px;
+                margin-left: 40px;
+            }
+            .infoMain{position: absolute;
+                /* Rectangle 54 */
+
+                box-sizing: border-box;
+                width: 40%;
+                height: 90vh;
+
+                background: rgba(0, 0, 0, 0.5);
+                border: 1px solid rgba(255, 255, 255, 0.589);
+                backdrop-filter: blur(12px);
+                /* Note: backdrop-filter has minimal browser support */
+                border-radius: 0px 10px 0px 0px;
+                bottom: 0px;
+                border-left: none;
+                border-bottom:none ;
+                overflow: hidden;
+                box-shadow: 0px 0px 100px 0px black;
+            }
+        }
+    }
+}
+.edu {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 100;
+    font-size: 15pt;
+    color: #FFFFFF;
+    line-height: 1.6;
+    padding: 20px 0;
+    margin: 30px 40px 0 40px;
+    width: calc(100% - 80px); /* Чтобы учесть горизонтальные margin'ы */
+    height: auto;
+    word-wrap: break-word;
+}
+.krug1{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(124, 139, 211, 0.25);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+.triangle{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 250px solid rgb(156, 169, 232, 0.3);
+    margin-top: 30vh;
+    margin-left: 10%;
+    transform: rotate(-20deg);
+}
+
+.square{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(156, 169, 232, 0.25);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    transform: rotate(20deg);
+    margin-top: 50vh;
+    z-index: 0;
+}
+
+.photo{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.devicee{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 40px 5px rgb(0, 0, 0);
+}
+
+.menu{
+    position: fixed;
+    z-index: 10;
+    margin-left: calc(100% - 35px);
+    transition: transform 0.3s ease-in-out !important;
+    overflow: hidden;
+    button{
+        margin-top: 10px;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: 0.4s;
+        overflow: hidden;
+    }
+    .menudiv{
+        width: 400px;
+        height: 100vh;
+        margin-left: 35px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(30px);
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.divDiv{
+    width: 100%;
+    height: calc(50vh);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-between;
+}
+
+button:hover{
+    transform: scale(1.1);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.menu button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-icon {
+  width: 25px;
+  height: 20px;
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #0A1F3F;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bar:nth-child(1) { top: 0; }
+.bar:nth-child(2) { top: 8px; }
+.bar:nth-child(3) { top: 16px; }
+
+/* Анимация при открытии меню */
+.menu.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+main{
+
+    width: 100%;
+    height: 9000vh;
+    z-index: 2;
+    .mainDiv1{
+        z-index: 3;
+        width: 100%;
+        height: 100vh;
+        border: 1px solid red;
+        background-color: white;
+    }
+}
